@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>原生事件的回顾</title>
+  </head>
+  <body>
+    <input type="file" onchange="fileUploadChange(event)" />
+    <input
+      type="text"
+      oninput="textInput(event)"
+      onchange="textChange(event)"
+    />
+    <button onclick="clickBtn()">点我</button>
+  </body>
+  <script>
+    function fileUploadChange(event) {
+      console.log(event);
+    }
+    function clickBtn() {
+      console.log('点击了按钮');
+    }
+
+    function textInput(event) {
+      console.log(event.target.value);
+    }
+    function textChange(event) {
+      console.log(event.target.value);
+    }
+  </script>
+</html>
